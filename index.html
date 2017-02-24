@@ -4,11 +4,25 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Wide World Travel</title>
-
+        <link rel="stylesheet" type="text/css" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
         <h1>The BEST travel guides</h1>
+        <div class="container" ng-app="wideWorldApp" ng-controller="BookCtrl">
+            <div ng-repeat="book in books">
+                <div class="card col-xs-4">
+                    <div class="card-block">
+                        <h4 class="card-title">{{book.title}}</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">${{book.price}}</h6>
+                        <p class="card-text">Guide Type: {{book.type}}</p>
+                        <a href="#" class="btn btn-primary">Buy It Now!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="lib/node_modules/angular/angular.min.js"></script>
 
